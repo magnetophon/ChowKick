@@ -57,6 +57,14 @@ if(MACOS_RELEASE)
         XCODE_ATTRIBUTE_ENABLE_HARDENED_RUNTIME YES)
 endif()
 
+foreach(target IN ITEMS BinaryData juce_plugin_modules ChowKick ChowKick_Standalone)
+    set_target_properties(${target}
+        PROPERTIES
+            RUNTIME_OUTPUT_DIRECTORY "./"
+            ARCHIVE_OUTPUT_DIRECTORY "./"
+            LIBRARY_OUTPUT_DIRECTORY "./")
+endforeach()
+
 if(IOS)
     message(STATUS "Setting iOS-specific properties...")
 
