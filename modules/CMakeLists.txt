@@ -56,3 +56,5 @@ set_target_properties(juce_plugin_modules PROPERTIES
     C_VISBILITY_PRESET hidden
     CXX_VISIBILITY_PRESET hidden
 )
+set_target_properties(juce_plugin_modules PROPERTIES
+    POSITION_INDEPENDENT_CODE TRUE)
